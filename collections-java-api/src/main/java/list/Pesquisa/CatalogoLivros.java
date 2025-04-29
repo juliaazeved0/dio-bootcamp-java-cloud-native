@@ -1,4 +1,4 @@
-package main.java.list.OperacoesBasicas.Pesquisa;
+package main.java.list.Pesquisa;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class CatalogoLivros {
 
     public List<Livro> pesquisarPorAutor(String autor) {
         List<Livro> livrosPorAutor = new ArrayList<>();
-        if (! livrosList.isEmpty() ) {
+        if (!livrosList.isEmpty()) {
             for (Livro l : livrosList) {
                 if (l.getAutor().equalsIgnoreCase(autor)) {
                     livrosPorAutor.add(l);
@@ -31,13 +31,25 @@ public class CatalogoLivros {
 
     public List<Livro> pesquisaPorIntervaloDeTempo(int anoInicial, int anoFinal){
         List<Livro> livrosPorIntervaloAnos = new ArrayList<>();
-        if(! livrosPorIntervaloAnos.isEmpty()){
-            for (Livro l : livrosPorIntervaloAnos){
+        if(!livrosList.isEmpty()){
+            for (Livro l : livrosList){
                 if(l.getAnoPublicacao() >= anoInicial && l.getAnoPublicacao() <= anoFinal){
                     livrosPorIntervaloAnos.add(l);
                 }
             }
         }
         return livrosPorIntervaloAnos;
+    }
+
+    public Livro pesquisaPorTitulo(String titulo){
+        Livro livroPorTitulo = null;
+        if(!livrosList.isEmpty()){
+            for(Livro l: livrosList){
+                if(l.getTitulo().equalsIgnoreCase(titulo)){
+                    livroPorTitulo = l;
+                }
+            }
+        }
+        return livroPorTitulo;
     }
 }
