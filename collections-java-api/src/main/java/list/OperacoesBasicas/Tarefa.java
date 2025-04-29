@@ -1,4 +1,4 @@
-package list.OperacoesBasicas;
+package main.java.list.OperacoesBasicas;
 
 public class Tarefa {
 
@@ -18,4 +18,5 @@ public class Tarefa {
                 "descricao='" + descricao + '\'' +
                 '}';
     }
+
 }
