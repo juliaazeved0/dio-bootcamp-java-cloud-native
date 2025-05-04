@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListaTarefa {
-//criando um objeto do tipo List que recebe elementos do tipo Tarefa e são chamados, tarefaList é a variável de referencia
+
     private List<Tarefa> tarefaList;
 
-    //sempre que criar um objeto terá um arrayList vazio esperando para armazenar o objeto
+
     public ListaTarefa() {
         this.tarefaList = new ArrayList<>();
     }
